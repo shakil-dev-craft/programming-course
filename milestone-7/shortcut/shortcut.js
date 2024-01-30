@@ -47,7 +47,13 @@ const inputNum = +input;
 // console.log(inputNum);
 
 
-const isActive = false;
+let isActive = false;
 const showUser = () => console.log('display User');
 const hideUser = () => console.log('hide User');
 // isActive ? showUser() : hideUser();
+
+// isActive && showUser();
+
+// isActive || showUser();
+isActive = !isActive;
+// console.log(isActive);
