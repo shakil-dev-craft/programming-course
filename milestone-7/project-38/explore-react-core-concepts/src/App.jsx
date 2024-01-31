@@ -10,14 +10,15 @@ function App() {
       <h1>Welcome, React world</h1>
       <Person />
       <Developer />
-      <Device name="Laptop" />
+      <Device name="Laptop" price="35000" />
+      <Device name="Mobile" price="14000" />
     </div>
   )
 }
 
 function Device(device) {
   console.log(device);
-  return <h2>This is Device: {device?.name}</h2>
+  return <h2>This is Device: {device?.name}, Price: {device?.price}</h2>
 }
 
 function Person() {
