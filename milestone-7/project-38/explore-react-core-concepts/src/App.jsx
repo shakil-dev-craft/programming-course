@@ -17,8 +17,9 @@ function App() {
 }
 
 function Device(device) {
-  console.log(device);
-  return <h2>This is Device: {device?.name}, Price: {device?.price}</h2>
+  const {name, price} = device;
+  console.log(name, price);
+  return <h2>This is Device: {name}, Price: {price}</h2>
 }
 
 function Person() {
