@@ -5,7 +5,7 @@ const UserDetails = () => {
     // load data
     const user = useLoaderData();
     // console.log(user);
-    const {name, website} = user;
+    const {name, website} = user || {};
 
     return (
         <div>

@@ -6,7 +6,7 @@ const User = ({user}) => {
     // console.log(user);
     // console.log(Object.keys(user));
 
-    const {id, name, email, phone} = user;
+    const {id, name, email, phone} = user || {};
     // console.log(id);
 
     const userStyle = {
