@@ -5,7 +5,7 @@ const Posts = () => {
 
     // Load data
     const posts = useLoaderData();
-    console.log(posts || []);
+    // console.log(posts || []);
 
     return (
         <div>
