@@ -1,4 +1,4 @@
-import { useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 
 const RefForm = () => {
 
@@ -20,6 +20,10 @@ const RefForm = () => {
             setError('');
         }
     };
+
+    useEffect(() => {
+        nameRef.current.focus();
+    }, []);
 
     console.log(error);
 
