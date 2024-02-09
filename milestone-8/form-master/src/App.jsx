@@ -1,11 +1,20 @@
 
 import './App.css'
-import HookForm from './components/HookForm/HookForm'
+import ReuseableForm from './components/ReuseableForm/ReuseableForm'
+// import HookForm from './components/HookForm/HookForm'
 // import RefForm from './components/RefForm/RefForm'
 // import StatefulForm from './components/StatefulForm/StatefulForm'
 // import SimpleForm from './components/SimpleForm/SimpleForm'
 
 function App() {
+
+  const handleSignUpSubmit = (data) => {
+    console.log(data);
+  };
+
+  const handleProfileUpdateSubmit = (data) => {
+    console.log(data);
+  };
 
   return (
     <>
@@ -13,7 +22,15 @@ function App() {
       {/* <SimpleForm /> */}
       {/* <StatefulForm /> */}
       {/* <RefForm /> */}
-      <HookForm />
+      {/* <HookForm /> */}
+      {/* <ReuseableForm formTitle={'Sign Up'} handleSubmit={handleSignUpSubmit} /> */}
+      <ReuseableForm formTitle={'Online Service'} handleSubmit={handleSignUpSubmit}>
+        <div>
+          <h1>Sign Up</h1>
+          <p>Please sign up right now</p>
+        </div>
+      </ReuseableForm>
+      <ReuseableForm formTitle={'Profile Update'} submitBtnText={'Update'} handleSubmit={handleProfileUpdateSubmit} />
     </>
   )
 }
