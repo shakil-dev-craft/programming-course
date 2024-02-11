@@ -1,5 +1,6 @@
 import PropTypes from 'prop-types';
 import Special from '../Special/Special';
+import Friend from '../Friend/Friend';
 
 const Cousin = ({name, asset}) => {
     // console.log(typeof name);
@@ -10,6 +11,7 @@ const Cousin = ({name, asset}) => {
             <p>{name}</p>
             <section>
                 { asset && <Special asset={asset} />}
+                { name === 'Rubaiya' && <Friend />}
             </section>
         </div>
     );
